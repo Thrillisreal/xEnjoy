@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "xenjoy_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "database": "xenjoy_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "database": "xenjoy_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
