@@ -12,9 +12,9 @@
 
 **_Description_**
 
-xEnjoy is an in-development app for bookmarking your favoirte anime/manga and interacting with others favorites
+xEnjoy is an in-development app for bookmarking your favorite anime/manga and reviewing other user's favorites!
 
-Development is managed and tracked on [Trello]().
+Development is managed and tracked on [Trello](https://trello.com/b/h59CzDof/xenjoy).
 
 ---
 
