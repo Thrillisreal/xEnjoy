@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
     }
   };
   comment.init({
-    name: DataTypes.STRING,
-    description: DataTypes.STRING,
-  },{
+    description: DataTypes.STRING
+  }, {
     sequelize,
     modelName: 'Comment',
     tableName: 'comments'
