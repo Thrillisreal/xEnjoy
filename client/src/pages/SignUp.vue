@@ -35,7 +35,19 @@ export default {
       this.password = event.target.value
     },
     async onSubmit(){
-      
+      try {
+      const res = await axios.post(`${BASE_URL}/api/user/register`, {"email": this.email, "password": this.password})
+      if (res.data){
+        localStorage.setItem('token', res.data)
+        this.email = ''
+        this.password = ''
+        this.$router.push(`/signin`)
+      } else {
+        alert("unauthorized")
+      }
+      } catch (err) {
+        alert("an error occurred when attempting to sign in")
+      }
     }
   }
 }

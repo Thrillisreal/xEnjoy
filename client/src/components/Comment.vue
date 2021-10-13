@@ -1,5 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <div>
+      <forum>
+        <input type=""/>
+        <button></button>
+      </forum>
+    </div>
+  </div>
 </template>
 
 <script>
