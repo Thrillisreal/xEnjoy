@@ -14,7 +14,7 @@
         <div class="linkdiv">
           <a href="/">New Account?</a>
         </div>
-        <button type="submit" :disabled="username ==='' || password === ''">Sign In</button>
+        <button type="submit" :disabled="email ==='' || password === ''">Sign In</button>
       </form>
     </div>
   </div>
