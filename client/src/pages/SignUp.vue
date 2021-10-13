@@ -29,7 +29,7 @@ export default {
     }),
   methods:{
   handleChange(event){
-      this.username = event.target.value
+      this.email = event.target.value
     },
     handlePass(event){
       this.password = event.target.value
