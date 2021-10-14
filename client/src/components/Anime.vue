@@ -4,6 +4,10 @@
 
 <script>
 export default {
-  name: 'Anime'
+  name: 'Anime',
+  data: ()=>({
+    getAnime: []
+  })
+
 }
 </script>

@@ -1,4 +1,6 @@
 const { Anime } = require('../anime')
-import Axios from 'axios'
+const axios = require('axios')
 
 
+  const res = await axios.get(``)
+  this.getAnime = res.data.results

@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   anime.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
+    img: DataTypes.STRING,
     userId: {
     type: Sequelize.INTEGER,
     onDelete: 'CASCADE',

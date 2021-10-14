@@ -2,7 +2,7 @@
   <div>
     <div>
       <forum>
-        <input @input='handleChange' type=""/>
+        <input @input='handleChange'/>
         <button>Send</button>
       </forum>
     </div>

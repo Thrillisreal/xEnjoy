@@ -9,7 +9,7 @@ const LogUserIn = async (req, res) => {
     })
     if (
       user &&
-      (await middleware.comparePassword(user.password, req.body.password))
+      (await middleware.comparePassword(user.passwordDigest, req.body.password))
     ) {
       let payload = {
         id: user.id,
@@ -27,8 +27,8 @@ const LogUserIn = async (req, res) => {
 const CreateNewUser = async (req, res) => {
   try {
     const { email, password, name } = req.body
-    let password = await middleware.hashPassword(password)
-    const user = await User.create({ email, password, name })
+    let passwordDigest = await middleware.hashPassword(password)
+    const user = await User.create({ email, passwordDigest, name })
     res.send(user)
   } catch (error) {
     throw error
@@ -43,13 +43,13 @@ const ChangePassword = async (req, res) => {
     if (
       user &&
       (await middleware.comparePassword(
-        user.dataValues.password,
+        user.dataValues.passwordDigest,
         req.body.oldPassword
       ))
     ) {
       const { newPassword } = req.body
-      let password = await middleware.hashPassword(newPassword)
-      await user.update({ password })
+      let passwordDigest = await middleware.hashPassword(newPassword)
+      await user.update({ passwordDigest })
       res.send({ status: 'success', msg: 'Password Updated' })
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
@@ -66,7 +66,7 @@ const DeleteUserAccount = async (req, res) => {
     })
     if (
       user &&
-      (await middleware.comparePassword(user.password, req.body.password))
+      (await middleware.comparePassword(user.passwordDigest, req.body.password))
     ) {
       await User.destroy({ where: { email: req.body.email } })
       return res.send({ msg: `User Deleted with email ${req.body.email}` })

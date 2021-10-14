@@ -11,15 +11,15 @@
         <h2>Password:</h2>
           <input type="password" :value="password" @input="handlePass" />
       </div>
-      <button type="submit" :disabled="this.email === '' || this.password === ''">SignUp</button>
+      <button type="submit" :disabled="email === '' || password === ''">SignUp</button>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-// import axios from 'axios'
-// import {BASE_URL} from '../../globals'
+import axios from 'axios'
+import {BASE_URL} from '../../globals'
 export default {
   name: 'SignUp',
   components:{
@@ -37,19 +37,22 @@ export default {
     this.password = event.target.value
     },
     async onSubmit(){
-      this.$router.push('/home')
-      // try {
-      // const res = await axios.post(`${BASE_URL}user/register`, {"email": this.email, "password": this.password})
-      // if (res.data){
-      //   localStorage.setItem('token', res.data)
-      //   this.email = ''
-      //   this.password = ''
-      // } else {
-      //   alert("unauthorized")
-      // }
-      // } catch (err) {
-      //   alert("an error occurred when attempting to sign in")
-      // }
+      // console.log('hi')
+      // this.$router.push('/home')
+      try {
+      const res = await axios.post(`${BASE_URL}api/user/register`, {"email": this.email, "password": this.password})
+      if (res.data){
+        localStorage.setItem('token', res.data)
+        this.email = ''
+        this.password = ''
+        this.$router.push(`/signin`)
+      } else {
+        alert("unauthorized")
+      }
+      } catch (err) {
+        alert("an error occurred when attempting to sign in")
+      }
     }
   }
 }
+</script>
