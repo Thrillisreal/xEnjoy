@@ -3,7 +3,7 @@
     <div>
       <h2>What Is xEnjoy?</h2>
       <p>
-        xEnjoy is an in-development app for bookmarking your favorite anime/manga and reviewing other user's favorites!
+        xEnjoy is an app for bookmarking your favorite anime/manga and reviewing other user's favorites!
       </p>
     </div>
     <h2></h2>
@@ -36,6 +36,6 @@
 
 <script>
 export default {
-
+  name: 'About'
 }
 </script>

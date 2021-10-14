@@ -1,6 +1,11 @@
 <template>
   <div>
-
+  <div>
+    <Anime/>
+  </div>
+  <div>
+    <Comment/>
+  </div>
   </div>
 </template>
 

@@ -11,7 +11,7 @@
           <h2>Password:</h2>
           <input type="password" :value="password" @input="handlePass" />
         </div>
-        <div class="linkdiv">
+        <div>
           <a href="/">New Account?</a>
         </div>
         <button type="submit" :disabled="email ==='' || password === ''">Sign In</button>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import {BASE_URL} from '../../globals'
 export default {
   name: 'SignIn',
@@ -36,19 +37,19 @@ export default {
     handlePass(event){
       this.password = event.target.value
     },
-    async onSubmit(e){
-     try {
-      const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
-      if (res.data){
-        localStorage.setItem('token', res.data)
-        this.password = ''
-        this.$router.push({ path: `/home`, props: {"email": this.email }})
-      } else {
-        alert("unauthorized")
-      }
-      } catch (err) {
-        alert("an error occurred when attempting to sign in")
-      }
+    async onSubmit(){
+      this.$router.push({ path: `/home`, props: {"email": this.email }})
+    //  try {
+    //   const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
+    //   if (res.data){
+    //     localStorage.setItem('token', res.data)
+    //     this.password = ''
+    //   } else {
+    //     alert("unauthorized")
+    //   }
+    //   } catch (err) {
+    //     alert("an error occurred when attempting to sign in")
+    //   }
   }
 }
 }
