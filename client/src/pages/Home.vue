@@ -19,14 +19,17 @@ export default {
   Comment
   }
   ,
-  data: ()=>{
-  
-  },
+  data: ()=>({
+    animes: []
+  }),
   mounted(){
 
   },
   methods: {
-    
+    async getGenres() {
+      const res = await axios.get(``)
+      this.genres = res.data.results
+    }
   }
 
 }
