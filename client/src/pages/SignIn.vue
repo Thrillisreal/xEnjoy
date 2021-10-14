@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import {BASE_URL} from '../../globals'
+// import axios from 'axios'
+// import {BASE_URL} from '../../globals'
 export default {
   name: 'SignIn',
   components: {},
@@ -38,7 +38,8 @@ export default {
       this.password = event.target.value
     },
     async onSubmit(){
-      this.$router.push({ path: `/home`, props: {"email": this.email }})
+      this.$router.push('/home')
+      // this.$router.push({ path: `/home`, props: {"email": this.email }})
     //  try {
     //   const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
     //   if (res.data){

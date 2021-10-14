@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import {BASE_URL} from '../../globals'
+// import axios from 'axios'
+// import {BASE_URL} from '../../globals'
 export default {
   name: 'SignUp',
   components:{
@@ -34,10 +34,10 @@ export default {
     this.email = event.target.value
     },
     handlePass(event){
-      this.password = event.target.value
+    this.password = event.target.value
     },
     async onSubmit(){
-      this.$router.push(`/signin`)
+      this.$router.push('/home')
       // try {
       // const res = await axios.post(`${BASE_URL}user/register`, {"email": this.email, "password": this.password})
       // if (res.data){

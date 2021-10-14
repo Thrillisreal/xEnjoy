@@ -2,8 +2,8 @@
   <div>
     <div>
       <forum>
-        <input type=""/>
-        <button></button>
+        <input @input='handleChange' type=""/>
+        <button>Send</button>
       </forum>
     </div>
   </div>
@@ -11,6 +11,14 @@
 
 <script>
 export default {
-  name: 'Comment'
+  name: 'Comment',
+  data: ()=>({
+  typecomment: ''
+  }),
+  methods:{
+  handleChange(){
+    this.typecomment = event.target.value
+  }
+  }
 }
 </script>
