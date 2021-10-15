@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav id="nav">
+      <router-link to="/home">xEnjoy</router-link>
       <router-link to="/"></router-link>
       <router-link to="/signin">Login</router-link>
       <router-link to="/home">Home</router-link>
