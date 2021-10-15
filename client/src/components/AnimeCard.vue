@@ -3,18 +3,22 @@
     <div>
     <img :src="img">
     </div>
-    <div >
+    <div>
       <h3>{{name}}</h3>
+    </div>
+    <div>
+      <h3>{{description}}</h3>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AnimeGenre',
-   props:{
+  name: 'AnimeCard',
+  props:{
     name: String,
-    img: String
+    img: String,
+    description: String
   }
 }
 </script>

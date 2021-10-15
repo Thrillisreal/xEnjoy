@@ -3,10 +3,10 @@
   <div  v-for="anime in animes" :key="anime.id">
     <div  @click="selectAnime(anime.id)">
     <Anime :anime="anime" :name="anime.attributes.canonicalTitle" :img="anime.attributes.posterImage.small" :description="anime.attributes.description"/>
+    <button>Bookmark</button>
     </div>
   </div>
   <div>
-  <!-- <button @click='getAnimes'>Get animes</button> -->
   </div>
   <div>
     <Comment/>
