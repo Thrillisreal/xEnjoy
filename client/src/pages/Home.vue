@@ -33,11 +33,10 @@ export default {
   methods: {
      async getAnimes() {
       const res = await axios.get('https://kitsu.io/api/edge/anime')
-      console.log(res.data.data)
       this.animes = res.data.data
     },
      selectAnime(animeId) {
-      this.$router.push(`/details/:anime_id${animeId}`)
+      this.$router.push(`/details/${animeId}`)
     }
   }
 
