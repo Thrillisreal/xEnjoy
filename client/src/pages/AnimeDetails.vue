@@ -20,17 +20,19 @@
       <p>{{animeDetails.attributes.averageRating}}</p>
     </div>
   </div>
-  <button>Bookmark</button>
+  <!-- <button @click="saveAnimeDetails()">Bookmark</button> -->
+  <Comment />
 </div>
 </template>
 
 
 <script>
 import axios from 'axios'
+import Comment from '../components/Comment'
 export default {
   name: 'AnimeDetails',
   components:{
-  
+    Comment
   },
   data: ()=>({
   animeDetails: {}
@@ -49,8 +51,13 @@ export default {
       }catch(error){
         console.log(error.response)
       }
-      // this.animeDetails = 
     },
+    async saveAnimeDetails(){
+      const res = await axios.post(`http://localhost:3001/api/anime/watchlist`)
+     console.log(res)
+    }
+
+
   }
 }
 </script>
