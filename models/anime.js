@@ -11,17 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Anime.belongsTo(models.User, { foreignKey: 'userId' })
+      // Anime.belongsTo(models.User, { foreignKey: 'userId' })
 
-      Anime.hasMany(models.Comment, { foreignKey: 'animeId' })
+      // Anime.hasMany(models.Comment, { foreignKey: 'animeId' })
     }
   };
-  anime.init({
+  Anime.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     img: DataTypes.STRING,
     userId: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     onDelete: 'CASCADE',
     references: {
       model: 'users',

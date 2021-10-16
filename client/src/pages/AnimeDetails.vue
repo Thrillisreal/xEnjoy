@@ -20,22 +20,27 @@
       <p>{{animeDetails.attributes.averageRating}}</p>
     </div>
   </div>
-  <!-- <button @click="saveAnimeDetails()">Bookmark</button> -->
-  <Comment />
+  <CommentForm @getComments="getComments"  />
+  <div v-for=" comment in allComments" :key="comment.id">
+    <Comment :description="comment.description" :commentId="comment.id"/>
+  </div>
 </div>
 </template>
 
 
 <script>
 import axios from 'axios'
+import CommentForm from '../components/CommentForm'
 import Comment from '../components/Comment'
 export default {
   name: 'AnimeDetails',
   components:{
+    CommentForm,
     Comment
   },
   data: ()=>({
-  animeDetails: {}
+  animeDetails: {},
+  allComments: []
   }),
   mounted(){
   this.getAnimeDetails()
@@ -55,7 +60,12 @@ export default {
     async saveAnimeDetails(){
       const res = await axios.post(`http://localhost:3001/api/anime/watchlist`)
      console.log(res)
-    }
+    },
+    async getComments(){
+     const res = await axios.get(`http://localhost:3001/api/comment/allcomments`)
+     console.log(res)
+    this.allComments = res.data
+  }
 
 
   }
