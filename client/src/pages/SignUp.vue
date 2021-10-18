@@ -80,4 +80,8 @@ export default {
 .signup-contain h2{
   color: white;
 }
+.signup input{
+  padding: 5px 25px;
+  border-radius: 5px;
+}
 </style>
