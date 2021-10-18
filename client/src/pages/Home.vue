@@ -1,12 +1,15 @@
 <template>
   <div>
-  <div class="anime-contain" v-for="anime in animes" :key="anime.id">
-    <div class="anime-card" @click="selectAnime(anime.id)">
-    <Anime :anime="anime" :name="anime.attributes.canonicalTitle" :img="anime.attributes.posterImage.small" />
+    <div class="anime-contain" v-for="anime in animes" :key="anime.id">
+      <div class="anime-card" @click="selectAnime(anime.id)">
+        <Anime
+          :anime="anime"
+          :name="anime.attributes.canonicalTitle"
+          :img="anime.attributes.posterImage.small"
+        />
+      </div>
     </div>
-  </div>
-  <div>
-  </div>
+    <div></div>
   </div>
 </template>
 
@@ -16,25 +19,23 @@ import axios from 'axios'
 export default {
   name: 'AnimeDetails',
   components: {
-  Anime, 
-  }
-  ,
-  data: ()=>({
+    Anime
+  },
+  data: () => ({
     animes: []
   }),
-  mounted(){
-  this.getAnimes()
+  mounted() {
+    this.getAnimes()
   },
   methods: {
-     async getAnimes() {
+    async getAnimes() {
       const res = await axios.get('https://kitsu.io/api/edge/anime')
       this.animes = res.data.data
     },
-     selectAnime(animeId) {
+    selectAnime(animeId) {
       this.$router.push(`/details/${animeId}`)
     }
   }
-
 }
 </script>
 
@@ -51,7 +52,7 @@ export default {
   box-shadow: 0 8px 16px 0 #66FCF1
 }
 .anime-contain{
-  display: flex;
+  display: flex:
   flex-wrap: wrap;
   
 }
