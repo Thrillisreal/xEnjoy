@@ -39,8 +39,6 @@ export default {
     this.password = event.target.value
     },
     async onSubmit(){
-      // console.log('hi')
-      // this.$router.push('/home')
         this.$router.push(`/signin`)
     }
   }
