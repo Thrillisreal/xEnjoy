@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import {BASE_URL} from '../../globals'
+// import axios from 'axios'
+// import {BASE_URL} from '../../globals'
 export default {
   name: 'SignUp',
   components:{
@@ -39,19 +39,19 @@ export default {
     async onSubmit(){
       // console.log('hi')
       // this.$router.push('/home')
-      try {
-      const res = await axios.post(`${BASE_URL}api/user/register`, {"email": this.email, "password": this.password})
-      if (res.data){
-        localStorage.setItem('token', res.data)
-        this.email = ''
-        this.password = ''
         this.$router.push(`/signin`)
-      } else {
-        alert("unauthorized")
-      }
-      } catch (err) {
-        alert("an error occurred when attempting to sign in")
-      }
+      // try {
+      // // const res = await axios.post(`${BASE_URL}api/user/register`, {"email": this.email, "password": this.password})
+      // // if (res.data){
+      // //   localStorage.setItem('token', res.data)
+      // //   this.email = ''
+      // //   this.password = ''
+      // // } else {
+      // //   alert("unauthorized")
+      // }
+      // } catch (err) {
+      //   alert("an error occurred when attempting to sign in")
+      // }
     }
   }
 }

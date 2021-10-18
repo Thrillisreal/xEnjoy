@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div>
+    <div class="comments">
       <form v-on:submit="handleSubmit">
         <input @input='handleChange'/>
         <button>Send</button>
-        <button>X</button>
       </form>
       <div >
-      <button @click="getAllComments">get comments</button>
+      <button class="getbtn" @click="getAllComments">Show Comments</button>
       </div>
     </div>
   </div>
@@ -49,3 +48,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .getbtn{
+    margin-top: 20px;
+  }
+  .comments{
+   
+  }
+</style>

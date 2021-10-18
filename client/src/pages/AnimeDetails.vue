@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="comment-contain">
   <div>
     <div>
       <img :src="animeDetails.attributes.coverImage.small"/>
@@ -7,7 +7,7 @@
     <div>
     <h3>{{animeDetails.attributes.canonicalTitle}}</h3>
     </div>
-    <div>
+    <div class="anime-des">
       <p>Description:</p>
       <p>{{animeDetails.attributes.description}}</p>
     </div>
@@ -21,7 +21,7 @@
     </div>
   </div>
   <CommentForm @getComments="getComments"  />
-  <div v-for=" comment in allComments" :key="comment.id">
+  <div class="forcommment" v-for=" comment in allComments" :key="comment.id">
     <Comment :description="comment.description" :commentId="comment.id"/>
   </div>
 </div>
@@ -71,3 +71,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.comment-contain{
+  border: 1px solid black;
+  width: 100%;
+}
+.anime-des{
+  text-align: center;
+}
+</style>
