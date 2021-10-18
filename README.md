@@ -35,13 +35,30 @@ Eventually we will have a direct link here.
 
 **_Screenshots_**
 
+##### Sign In/ Sign Up Page
+
+![Sign In](client/photos/signin.png)
+![Sign Up](client/photos/signup.png)
+---
+
+##### Create Home Page
+
+![Home](client/photos/Home.png)
+
+---
+
+##### Anime Detail Page
+
+![AnimeDetail](client/photos/animedetail.png)
+
+---
 
 ---
 
 **_To Do_**
 
-- [ ]  Planning
-- [ ] Everything else
+- [x]  Planning
+- [x] Everything else
 
 ---
 
