@@ -42,18 +42,6 @@ export default {
       // console.log('hi')
       // this.$router.push('/home')
         this.$router.push(`/signin`)
-      // try {
-      // // const res = await axios.post(`${BASE_URL}api/user/register`, {"email": this.email, "password": this.password})
-      // // if (res.data){
-      // //   localStorage.setItem('token', res.data)
-      // //   this.email = ''
-      // //   this.password = ''
-      // // } else {
-      // //   alert("unauthorized")
-      // }
-      // } catch (err) {
-      //   alert("an error occurred when attempting to sign in")
-      // }
     }
   }
 }
