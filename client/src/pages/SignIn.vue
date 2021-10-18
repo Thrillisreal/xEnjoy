@@ -82,6 +82,7 @@ export default {
 .signin-title{
   padding-top: 150px;
   color: #66FCF1;
+  text-decoration: underline;
 }
 .signin a{
   padding: 5px 10px;
