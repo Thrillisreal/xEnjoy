@@ -24,7 +24,4 @@ span{
   float: left;
   padding-left: 40px;
 }
-#nav router-link-exact-active{
-  margin-left: 10px;
-}
 </style>
