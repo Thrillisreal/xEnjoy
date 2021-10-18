@@ -52,7 +52,7 @@ export default {
   box-shadow: 0 8px 16px 0 #66FCF1
 }
 .anime-contain{
-  display: flex:
+  display: flex;
   flex-wrap: wrap;
   
 }
