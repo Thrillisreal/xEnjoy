@@ -15,3 +15,7 @@ export default {
   name: 'Nav'
 }
 </script>
+<style scoped>
+#nav {
+}
+</style>

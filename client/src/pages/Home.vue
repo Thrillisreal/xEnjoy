@@ -7,21 +7,16 @@
   </div>
   <div>
   </div>
-  <div>
-    <Comment/>
-  </div>
   </div>
 </template>
 
 <script>
 import Anime from '../components/Anime'
-import Comment from '../components/Comment'
 import axios from 'axios'
 export default {
   name: 'AnimeDetails',
   components: {
   Anime, 
-  Comment
   }
   ,
   data: ()=>({
@@ -47,17 +42,20 @@ export default {
 .anime-card{
   border: 2px solid black;
   width: 284px;
-  margin-top: 10px;
+  margin-top: 30px;
   border-radius: 5px;
   box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
   text-align: center;
 }
 .anime-card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 8px 16px 0 #66FCF1
 }
 .anime-contain{
   display: flex;
   flex-wrap: wrap;
   
+}
+*{
+  background-color: #0C0C10;
 }
 </style>

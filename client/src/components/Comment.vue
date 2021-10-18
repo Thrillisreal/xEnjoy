@@ -1,11 +1,11 @@
 <template>
-<div>
+<div class="comment-comment">
 <p v-if="!edit">{{description}}</p>
 <textarea v-else :value="description" @input="handleChange"></textarea>
 <div>
-  <button v-if="!edit" @click="toggleEdit">Edit</button>
+  <button class="editbtn" v-if="!edit" @click="toggleEdit">Edit</button>
   <button v-else @click="handleSubmit">Saved Changes</button>
-  <button @click="deleteComment">X</button>
+  <button class="deletebtn" @click="deleteComment">X</button>
 </div>
 </div>
 </template>
@@ -40,3 +40,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.comment-comment{
+  background-color: #1F2833;
+}
+.deletebtn{
+  color: #66FCF1;
+  padding: 5px 5px;
+  margin-left: 4px;
+}
+.editbtn{
+  padding: 5px 5px;
+}
+</style>

@@ -3,7 +3,7 @@
     <div>
       <img :src="img"/>
     </div>
-    <div>
+    <div class="anime-name">
       <h3>{{name}}</h3>
     </div>
     <div>{{description}}</div>
@@ -24,3 +24,9 @@ export default {
 
 }
 </script>
+<style scoped>
+  .anime-name h3{
+    color: white;
+    background-color: #45A29E;
+  }
+</style>

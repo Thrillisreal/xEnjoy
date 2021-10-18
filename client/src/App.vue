@@ -19,18 +19,14 @@ export default {
 <style>
 #app 
 
-#nav {
-  padding: 30px;
-}
-
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #66FCF1;
   margin-left: 10px;
 }
 #nav{
-  background-color: black;
-  margin-bottom: 10px;
+  background-color: #1F2833;
+   padding: 15px;
 }
 #app{
   font-family: Prompt;

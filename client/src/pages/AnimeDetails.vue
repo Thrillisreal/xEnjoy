@@ -2,27 +2,30 @@
 <div class="comment-contain">
   <div>
     <div>
-      <img :src="animeDetails.attributes.coverImage.small"/>
+      <img :src="animeDetails.attributes.coverImage.small" width="100%" height="300px"/>
     </div>
     <div>
-    <h3>{{animeDetails.attributes.canonicalTitle}}</h3>
+    <h3 class="anime-title">{{animeDetails.attributes.canonicalTitle}}</h3>
     </div>
     <div class="anime-des">
-      <p>Description:</p>
-      <p>{{animeDetails.attributes.description}}</p>
+      <p class="headers">Description:</p>
+      <p class="anime-details">{{animeDetails.attributes.description}}</p>
     </div>
     <div>
-      <p>Age Rating:</p>
-      <p>{{animeDetails.attributes.ageRatingGuide}}</p>
+      <p class="headers">Age Rating:</p>
+      <p class="anime-details">{{animeDetails.attributes.ageRatingGuide}}</p>
     </div>
     <div>
-      <p>Rating:</p>
-      <p>{{animeDetails.attributes.averageRating}}</p>
+      <p class="headers">Rating:</p>
+      <p class="anime-details">{{animeDetails.attributes.averageRating}}</p>
     </div>
   </div>
+  <div class="comment-sec">
+  <h3>Your thoughts...</h3>
   <CommentForm @getComments="getComments"  />
   <div class="forcommment" v-for=" comment in allComments" :key="comment.id">
     <Comment :description="comment.description" :commentId="comment.id"/>
+  </div>
   </div>
 </div>
 </template>
@@ -74,10 +77,48 @@ export default {
 
 <style scoped>
 .comment-contain{
-  border: 1px solid black;
-  width: 100%;
+  border: 2px solid black;
 }
-.anime-des{
+.comment-contain img{
+  border-radius: 10px;
+}
+
+.headers{
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  margin-left: 10px;
+  color: #66FCF1;
+}
+.comment-sec{
   text-align: center;
+  margin: 30px auto;
+  border: 2px solid #45A29E;
+  width: 400px;
+  height: 300px;
+  padding-top: 70px;
+  border-radius: 10px;
+  background-color: #1F2833;
+  color: white;
+}
+.comment-sec h3{
+  color: #45A29E;
+  background-color: #1F2833;
+}
+.anime-details{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  color: white;
+  line-height: 30px;
+}
+.anime-title{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #66FCF1;
+}
+*{
+  background-color: #0C0C10;
 }
 </style>

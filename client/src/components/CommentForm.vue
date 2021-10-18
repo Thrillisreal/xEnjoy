@@ -52,8 +52,12 @@ export default {
 <style scoped>
   .getbtn{
     margin-top: 20px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #66FCF1;
+    border-radius: 5px;
   }
   .comments{
-   
+   background-color: #1F2833;
   }
 </style>
