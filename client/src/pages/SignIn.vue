@@ -1,11 +1,13 @@
 <template>
-  <div >
-    <div>
+  <div class="signin-contain">
+    <div class="signin">
+      <div>
       <h1>Sign In</h1>
-      <form @submit.prevent="onSubmit" >
+      </div>
+      <form @submit.prevent="onSubmit">
         <div>
           <h2>Email:</h2>
-          <input type="email" :value="email" @input="handleChange"  />
+          <input type="email" :value="email" @input="handleChange" />
         </div>
         <div>
           <h2>Password:</h2>
@@ -14,7 +16,9 @@
         <div>
           <a href="/">New Account?</a>
         </div>
-        <button type="submit" :disabled="email ==='' || password === ''">Sign In</button>
+        <button type="submit" :disabled="email === '' || password === ''">
+          Sign In
+        </button>
       </form>
     </div>
   </div>
@@ -28,30 +32,45 @@ export default {
   components: {},
   data: () => ({
     email: '',
-    password: '',
+    password: ''
   }),
   methods: {
-    handleChange(event){
+    handleChange(event) {
       this.email = event.target.value
     },
-    handlePass(event){
+    handlePass(event) {
       this.password = event.target.value
     },
-    async onSubmit(){
+    async onSubmit() {
       this.$router.push('/home')
       // this.$router.push({ path: `/home`, props: {"email": this.email }})
-    //  try {
-    //   const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
-    //   if (res.data){
-    //     localStorage.setItem('token', res.data)
-    //     this.password = ''
-    //   } else {
-    //     alert("unauthorized")
-    //   }
-    //   } catch (err) {
-    //     alert("an error occurred when attempting to sign in")
-    //   }
+      //  try {
+      //   const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
+      //   if (res.data){
+      //     localStorage.setItem('token', res.data)
+      //     this.password = ''
+      //   } else {
+      //     alert("unauthorized")
+      //   }
+      //   } catch (err) {
+      //     alert("an error occurred when attempting to sign in")
+      //   }
+    }
   }
 }
-}
 </script>
+<style scoped>
+.signin {
+  text-align: center;
+  /* margin-top: 150px; */
+  line-height: 50px;
+}
+
+.signin button{
+  padding: 5px 10px;
+}
+.signin-contain{
+  background-color: #0C0C10;
+  height: 100vh;
+}
+</style>
