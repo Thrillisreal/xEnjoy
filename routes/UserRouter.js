@@ -6,8 +6,6 @@ router.post('/login', controller.LogUserIn)
 router.post('/register', controller.CreateNewUser)
 router.put(
   '/changepassword',
-  // middleware.stripToken,
-  // middleware.verifyToken,
   controller.ChangePassword
 )
 router.delete(
