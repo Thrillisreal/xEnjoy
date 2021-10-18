@@ -18,5 +18,6 @@ export default {
 <style scoped>
 #nav {
   text-align: right;
+  padding-right: 60px;
 }
 </style>
