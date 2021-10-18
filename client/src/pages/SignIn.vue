@@ -67,7 +67,9 @@ export default {
 
 .signin button{
   padding: 5px 10px;
-  color
+  color: #66FCF1;
+  background-color: #1F2833;
+  border-radius: 5px;
 }
 .signin-contain{
   background-color: #0C0C10;
@@ -80,5 +82,15 @@ export default {
 .signin-title{
   padding-top: 150px;
   color: #66FCF1;
+}
+.signin a{
+  padding: 5px 10px;
+  color: #66FCF1;
+  background-color: #1F2833;
+  border-radius: 5px;
+}
+.signin input{
+  padding: 5px 25px;
+  border-radius: 5px;
 }
 </style>

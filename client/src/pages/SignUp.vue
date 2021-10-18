@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <div>
+  <div class="signup-contain">
+    <div class="signup">
+      <div class="signup-title">
       <h1>Sign Up</h1>
+      </div>
       <form @submit.prevent="onSubmit">
       <div>
         <h2>Email:</h2>
@@ -56,3 +58,23 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .signup-contain{
+  background-color: #0C0C10;
+  height: 100vh;
+}
+.signup button{
+  padding: 5px 10px;
+  color: #66FCF1;
+  background-color: #1F2833;
+  border-radius: 5px;
+}
+.signup {
+  text-align: center;
+  line-height: 50px;
+}
+.signup-title{
+  padding-top: 150px;
+  color: #66FCF1;
+}
+</style>
