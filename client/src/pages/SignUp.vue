@@ -76,6 +76,7 @@ export default {
 .signup-title{
   padding-top: 150px;
   color: #66FCF1;
+  text-decoration: underline;
 }
 .signup-contain h2{
   color: white;
