@@ -8,7 +8,6 @@ export const Client = Axios.create({ baseURL: BASE_URL })
 
 Client.interceptors.request.use(
   config => {
-    // Reads the token in localstorage
     const token = localStorage.getItem('token')
     // if the token exists, we set the authorization header
     if (token) {
