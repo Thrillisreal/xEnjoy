@@ -43,18 +43,6 @@ export default {
     },
     async onSubmit() {
       this.$router.push('/home')
-      // this.$router.push({ path: `/home`, props: {"email": this.email }})
-      //  try {
-      //   const res = await axios.post(`${BASE_URL}/api/user/login`, {"email": this.email, "password": this.password})
-      //   if (res.data){
-      //     localStorage.setItem('token', res.data)
-      //     this.password = ''
-      //   } else {
-      //     alert("unauthorized")
-      //   }
-      //   } catch (err) {
-      //     alert("an error occurred when attempting to sign in")
-      //   }
     }
   }
 }
