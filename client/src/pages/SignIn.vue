@@ -1,7 +1,7 @@
 <template>
   <div class="signin-contain">
     <div class="signin">
-      <div>
+      <div class="signin-title">
       <h1>Sign In</h1>
       </div>
       <form @submit.prevent="onSubmit">
@@ -62,15 +62,23 @@ export default {
 <style scoped>
 .signin {
   text-align: center;
-  /* margin-top: 150px; */
   line-height: 50px;
 }
 
 .signin button{
   padding: 5px 10px;
+  color
 }
 .signin-contain{
   background-color: #0C0C10;
   height: 100vh;
+}
+.signin-contain h2{
+  color: white;
+}
+
+.signin-title{
+  padding-top: 150px;
+  color: #66FCF1;
 }
 </style>
