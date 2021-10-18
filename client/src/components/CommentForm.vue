@@ -40,11 +40,6 @@ export default {
    async getAllComments(){
     this.$emit('getComments')
   }
-  // async deleteComment(){
-  //   const res = await axios.delete(`http://localhost:3001/api/comment/deletecomment/${}`)
-  // }
-
-
   }
 }
 </script>
