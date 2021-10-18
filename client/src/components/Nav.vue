@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav id="nav">
-      <router-link to="/home">xEnjoy</router-link>
+      <router-link to="/home"><span>xEnjoy</span></router-link>
       <router-link to="/"></router-link>
       <router-link to="/signin">Login</router-link>
       <router-link to="/home">Home</router-link>
@@ -19,5 +19,9 @@ export default {
 #nav {
   text-align: right;
   padding-right: 60px;
+}
+span{
+  float: left;
+  padding-left: 40px;
 }
 </style>
