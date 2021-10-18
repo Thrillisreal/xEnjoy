@@ -30,7 +30,6 @@ export default {
     },
     async handleSubmit(e){
     e.preventDefault()
-    // const comment = 
    await axios.put(`http://localhost:3001/api/comment/updatecomment/${this.commentId}`, {description : this.description })
   },
   async deleteComment(){
