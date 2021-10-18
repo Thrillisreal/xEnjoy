@@ -33,11 +33,10 @@ export default {
   },
   async handleSubmit(e){
     e.preventDefault()
-    // const comment = 
-   await axios.post(`http://localhost:3001/api/comment/newcomment`, {description : this.form.description })
-   this.form = {description:''}
+    await axios.post(`http://localhost:3001/api/comment/newcomment`, {description : this.form.description })
+    this.form = {description:''}
   },
-   async getAllComments(){
+    async getAllComments(){
     this.$emit('getComments')
   }
   }
