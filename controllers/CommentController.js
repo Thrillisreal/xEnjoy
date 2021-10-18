@@ -10,15 +10,6 @@ const GetAllComments = async (req, res) => {
   }
 }
 
-// const CreateComment = async (req, res) => {
-//   try {
-//     let commentBody = {...req.body}
-//     let newComment = await Comment.create(commentBody)
-//     res.send(newComment)
-//   } catch (error) {
-//     throw error
-//   }
-// }
 const CreateComment = async (req, res) => {
   try {
     console.log(req.body, 'request')
