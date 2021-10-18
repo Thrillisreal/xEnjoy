@@ -77,4 +77,7 @@ export default {
   padding-top: 150px;
   color: #66FCF1;
 }
+.signup-contain h2{
+  color: white;
+}
 </style>
