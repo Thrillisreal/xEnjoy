@@ -10,8 +10,6 @@ router.put(
 )
 router.delete(
   '/destroyuser',
-  // middleware.stripToken,
-  // middleware.verifyToken,
   controller.DeleteUserAccount
 )
 router.get(
