@@ -52,6 +52,6 @@ export default {
     border-radius: 5px;
   }
   .comments{
-   background-color: #1F2833;
+    background-color: #1F2833;
   }
 </style>
