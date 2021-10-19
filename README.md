@@ -57,9 +57,16 @@ Eventually we will have a direct link here.
 
 **_To Do_**
 
-- [x]  Planning
-- [x] Everything else
-
+- [x]  MVP
+  
 ---
 
+**_Future Updates_**
+
+- [ ] Search bar on home
+- [ ] Authentification
+- [ ] Bookmarking
+- [ ] Ratings
+- [ ] Maybe include a manga section.
+---
 **_Credits_**
