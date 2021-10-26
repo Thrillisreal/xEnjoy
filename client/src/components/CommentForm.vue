@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import {Client} from '../../globals'
 import axios from 'axios'
 export default {
   name: 'CommentForm',
@@ -25,7 +26,7 @@ export default {
   }),
   mounted(){
   this.handleSubmit()
-  this.getComments()
+  this.getAllComments()
   },
   methods:{
   handleChange(){
@@ -33,7 +34,7 @@ export default {
   },
   async handleSubmit(e){
     e.preventDefault()
-    await axios.post(`http://localhost:3001/api/comment/newcomment`, {description : this.form.description })
+    await Client.post({description : this.form.description })
     this.form = {description:''}
   },
     async getAllComments(){
