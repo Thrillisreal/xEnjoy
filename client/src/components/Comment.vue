@@ -12,6 +12,7 @@
 
 <script>
 import axios from 'axios'
+import {Client} from '../../globals'
 export default {
   name: 'Comment',
   props: {
@@ -30,14 +31,14 @@ export default {
     },
     async handleSubmit(e) {
       e.preventDefault()
-      await axios.put(
-        `http://localhost:3001/api/comment/updatecomment/${this.commentId}`,
+      await Client.put(
+        `/comment/updatecomment/${this.commentId}`,
         { description: this.description }
       )
     },
     async deleteComment() {
-      await axios.delete(
-        `http://localhost:3001/api/comment/deletecomment/${this.commentId}`
+      await Client.delete(
+        `/comment/deletecomment/${this.commentId}`
       )
     }
   }
