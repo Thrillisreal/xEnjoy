@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   development: {
-    database: '<xenjoy_development',
+    database: 'xenjoy_development',
     dialect: 'postgres'
   },
   test: {
