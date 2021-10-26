@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import {Client} from '../../globals'
 export default {
   name: 'Comment',

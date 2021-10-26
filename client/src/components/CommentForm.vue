@@ -14,7 +14,6 @@
 
 <script>
 import {Client} from '../../globals'
-import axios from 'axios'
 export default {
   name: 'CommentForm',
   data: ()=>({
